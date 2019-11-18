@@ -1,0 +1,31 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 40%;  
+  pointer-events: auto;
+  
+  background-clip: padding-box;
+
+  outline: 0;
+}
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    margin:auto;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+  }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: grey;
+
+}
+  

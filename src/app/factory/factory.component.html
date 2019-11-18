@@ -1,0 +1,28 @@
+
+<div class="node-text">
+  <span *ngIf="hasChildren; else elseBlock"
+        class="icon expand-icon glyphicon glyphicon-plus"  
+        [class.glyphicon-minus]="isExpanded" 
+        [class.selected]="isSelected"
+        (click)="expandToggled()"></span>
+        
+        <ng-template #elseBlock>
+          <span class="icon expand-icon glyphicon  glyphicon-none" ></span>
+        </ng-template>
+
+  <!-- Only Factories should be editable / selectable  -->
+  <span *ngIf="this.level != 2; else isEditableFactory" class="txt-pad" >{{factory.name}}</span>   
+  <ng-template #isEditableFactory>
+      <span (click)="select()" class="txt-pad"  >{{factory.name}}</span>     
+  </ng-template>
+
+  <span *ngIf="isRoot" (click) = "addFactory()" class="glyphicon glyphicon-cog" ></span>
+</div>
+<ul class="ul-clean"  *ngIf="isExpanded">
+  <li *ngFor="let factory of factory.children">
+    <factory class="list-group-item"
+    (selected)="childSelection($event)" (deleteRequested)= 'deleteChild($event)'  [factory]="factory" [level]="this.level"></factory>
+  </li>
+</ul>
+
+<!-- icon expand-icon glyphicon  -->

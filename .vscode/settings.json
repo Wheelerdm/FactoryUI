@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.deploySubpath": "",
+    "appService.defaultWebAppToDeploy": "/subscriptions/9390ad80-6d64-4055-8ddd-82dff4ea7b84/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/FactoryUI"
+}

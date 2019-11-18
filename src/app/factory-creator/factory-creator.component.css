@@ -1,0 +1,10 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+.wide{
+    width: 200 px !important;
+}
+.btn-pad{
+    margin-right:10px;
+    margin-bottom: 10px;
+
+}
+

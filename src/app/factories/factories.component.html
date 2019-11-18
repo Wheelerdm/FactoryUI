@@ -1,0 +1,20 @@
+
+<factory-creator  *ngIf ="this.showFactoryCreator"
+    class="modal-dialog-centered content modal-content" 
+  [factory]="newFactory" (closed)="onCreatorClosed()">
+</factory-creator>
+
+<factory-editor *ngIf ="this.showFactoryEditor" class="modal-dialog-centered content modal-content"   
+(deleted)="onFactoryDeleted()" (closed)="onEditorClosed()" [factory]="selectedFactory"></factory-editor>
+
+
+<div *ngIf="rootFactory; else elseBlock">
+   <factory (selected)="childSelection($event)" (createRequested)=createFactory()
+    [factory]="rootFactory" [level]="0"></factory>
+</div>
+<ng-template #elseBlock><H4>Loading...</H4></ng-template>
+
+
+    
+
+ 

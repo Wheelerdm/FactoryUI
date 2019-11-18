@@ -1,0 +1,42 @@
+.glyphicon:hover{
+    color:orange;
+}
+
+.list-group {
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: rgba(255, 255, 255, 0.26);
+    
+}
+
+a:hover > .glyphicon
+{
+
+    color:blue;
+}
+.node-text {
+    font-size: 18px;
+    padding:3px;
+}
+.txt-pad{
+    padding:3px;
+}
+.ul-clean{
+    list-style-type:none;
+}
+.glyphicon-none:before {
+    content: "\2122";
+    width: 6px;
+    color: transparent !important;
+}
+
+body{
+    font-size: 24px;
+  }
